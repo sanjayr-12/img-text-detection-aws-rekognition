@@ -1,0 +1,48 @@
+/* App.css */
+
+.app-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #6c757d;
+}
+
+.result-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
