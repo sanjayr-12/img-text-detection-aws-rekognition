@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import "./App.css"; 
+import "./App.css";
 
 function App() {
   const [img, setImg] = useState(null);
@@ -13,7 +13,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!img) return; 
+    if (!img) return;
 
     const formData = new FormData();
     formData.append("img", img);
