@@ -9,11 +9,13 @@ dotenv.config();
 app.use(cors());
 const storage = multer.memoryStorage();
 const upload = multer();
-const texts = [];
-let data = [];
 
 app.post("/img", upload.single("img"), async (req, res) => {
   const file = req.file;
+  const texts = [];
+  let data = [];
+  // const arr = Uint8Array.from(file.buffer)
+  // console.log(req.file);
   data = await Reko(file.buffer);
   data.TextDetections.map((item) => {
     texts.push(item.DetectedText);
@@ -21,6 +23,6 @@ app.post("/img", upload.single("img"), async (req, res) => {
   res.status(200).send(texts);
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("server started");
 });
